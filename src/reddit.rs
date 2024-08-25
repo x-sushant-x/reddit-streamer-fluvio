@@ -29,10 +29,7 @@ pub async fn fetch_reddit_posts() -> Result<Vec<RedditPost>, Box<dyn std::error:
         .as_array()
         .unwrap_or(&vec![])
         .iter()
-        .map(|p| {
-            // println!("Post: {}\n", p["data"]["selftext"]);
-            serde_json::from_value(p.clone()).unwrap()
-        })
+        .map(|p| serde_json::from_value(p.clone()).unwrap())
         .collect::<Vec<RedditPost>>();
 
     Ok(posts)

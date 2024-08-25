@@ -1,0 +1,12 @@
+[package]
+name = "clean_text"
+group = "clean-text"
+version = "0.1.0"
+apiVersion = "0.1.0"
+description = ""
+license = "Apache-2.0"
+visibility = "private"
+
+[[params]]
+name = "input"
+description = "input description"
